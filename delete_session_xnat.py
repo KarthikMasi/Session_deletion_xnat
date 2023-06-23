@@ -16,4 +16,5 @@ else:
 xnat = dax  .XnatUtils.get_interface()
 session = xnat.get_experiment_path(project_id,subject_id,session_id)
 session_obj = xnat.select(session)
+print("Deleting session {} from subject {} ".format(session_id,subject_id))
 session_obj.delete()
